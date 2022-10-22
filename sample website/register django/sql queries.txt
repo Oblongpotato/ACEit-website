@@ -1,0 +1,12 @@
+sql queries:-
+
+1. create database aceit;
+
+2. use aceit;
+
+3. create table registeredusers(
+id integer auto_increment primary key,
+name varchar(100),
+moodle_id int(10),
+email_id varchar(40),
+password varchar(30));

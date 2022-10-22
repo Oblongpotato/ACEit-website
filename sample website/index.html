@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample website Aceit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap"
+        rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="nofollow" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <section class="header" id="home" style="padding: 0; margin:0;">
+        <nav>
+            <a href="index.html"></a><img src="images/Aceitlogo.jpeg"></a>
+            <!--style="cursor: pointer;"-->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a class="nav-link" href="#home">HOME</a></li>
+                    <li><a class="nav-link" href="#resources">RESOURCES <i
+                                class="fa-sharp fa-solid fa-caret-down"></i></a></li>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a class="nav-link" href="#ig">INTERVIEW GUIDE</a></li>
+                            <li><a class="nav-link" href="#notes">NOTES</a></li>
+                            <li><a class="nav-link" href="#videos">VIDEOS</a></li>
+                            <li><a class="nav-link" href="#blogs">BLOGS</a></li>
+                        </ul>
+                    </div>
+                    <li><a class="nav-link" href="#contactus">CONTACT US</a></li>
+                    <li><a class="nav-link" href="#aboutus">ABOUT US</a></li>
+                </ul>
+            </div>
+            <a href="" class="hero-btn" style="border-radius:22px;">Signup</a>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Practice Makes Perfect</h1>
+            <p>"Practice like you've never won, Perform like you've never lost"<br>Try Our Topicwise Quizes To
+                Strenghten Your Concepts</p>
+            <a href="" class="hero-btn">Test Yourself!</a>
+        </div>
+
+    </section>
+
+
+    <!---------------------companies------------------------------>
+
+    <!--image slider start-->
+    <section class="sliderrr">
+        <div class="slider">
+            <h1>Companies</h1>
+            <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!-- <input type="radio" name="radio-btn" id="radio4"> -->
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                    <img src="images/google.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="images/Deloitte .jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="images/Amazon .jpg" alt="">
+                </div>
+                <!-- <div class="slide">
+                    <img src="images/4.jpg" alt="">
+                </div> -->
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <!-- <div class="auto-btn4"></div> -->
+                </div>
+                <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <!-- <label for="radio4" class="manual-btn"></label> -->
+            </div>
+            <!--manual navigation end-->
+        </div>
+        <!--image slider end-->
+
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function () {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 3) {
+                    counter = 1;
+                }
+            }, 5000);
+        </script>
+    </section>
+
+
+
+    <!---------------------Resources------------------------------>
+    <section class="resources" id="resources">
+        <h2>Resources</h2>
+        <h1>Knowledge Empowers</h1>
+
+        <div class="rowss">
+            <div class="row1">
+
+                <div class="r-column">
+                    <h3>Interview Guide</h3>
+                    <p>How to face the question round?</p>
+                    <h4>Have a look at this Interview guide!</h4>
+                    <a href="guide.html"><button type="submit" class="hero-btn"> Learn more</button></a>
+                </div>
+
+                <div class="r-column">
+                    <h3>Notes</h3>
+                    <p>Brush up your skills!</p>
+                    <h4>Check out these topic wise notes and quizes!</h4>
+                    <a href="notes.html"><button type="submit" class="hero-btn"> Learn more</button></a>
+                </div>
+
+            </div>
+
+            <div class="row2">
+
+                <div class="r-column">
+                    <h3>Videos</h3>
+                    <p>Visual learning time!</p>
+                    <h4>Some vidoes you might like! </h4>
+                    <a href="vidoes.html"><button type="submit" class="hero-btn"> Learn more</button></a>
+                </div>
+
+                <div class="r-column">
+                    <h3>BLOGS</h3>
+                    <p>"Ocean of Knowldege"</p>
+                    <h4>Check out our collection of interview blogs!<br>
+                        Click to learn more</h4>
+                    <a href="blogs.html"><button type="submit" class="hero-btn"> Learn more</button></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!---------------------blogs------------------------------>
+
+    <!--<section class="blogs" id="blogs">
+            <h2>BLOGS</h2>
+            <h1>Ocean of Knowldege</h1>
+            <div class="row1">
+                <div class="r-column">
+                    <h3>How to Answer “Where Do You See Yourself in 5 Years”</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis libero cumque corporis pariatur? 
+                        Repudiandae in eveniet...</p>
+                    <a href="" class="hero-btn purp-btn">Read more...</a>
+                </div>
+                <div class="r-column">
+                    <h3>How to Answer “Why Are You Interested in This Position?”</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis libero cumque corporis pariatur? 
+                        Repudiandae in eveniet...</p>
+                    <a href="" class="hero-btn purp-btn">Read more...</a>
+                </div>
+            </div>
+            <a href="" class="hero-btn">Load more...</a>
+        </section>-->
+
+    <!------------JAVA SCRIPT FOR TOGGLE MENU------------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showmenu() {
+            navLinks.style.right = "0";
+        }
+        function hidemenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+
+    <!---------------------contact us------------------------------>
+
+    <div class="contactus" id="contactus">
+        <section class="location">
+
+            <h2>Contact Us</h2>
+            <h1>Get in Touch!</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3294902981615!2d72.96505581490416!3d19.268032486978065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bba2e15f6c7b%3A0x20e1357d640bef7e!2sA.%20P.%20Shah%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1660759052143!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+
+
+        <section class="contact-us">
+
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>Survey No, 12, Ghodbunder Rd, opp. Hypercity Mall</h5>
+                            <p> Bhawani Nagar, Kasarvadavali,<br>
+                                Thane West, Thane, Maharashtra 400615
+                            </p>
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>077383 054XX</h5>
+                            <p>Monday to Saturday, 10AM to 6PM</p>
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <span>
+                            <h5>info@aceit.com</h5>
+                            <p>Email us your query</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact-col">
+
+                    <form>
+                        <input type="text" placeholder="Enter your name" required>
+                        <input type="text" placeholder="Enter your email addess" required>
+                        <input type="text" placeholder="Enter your branch" required>
+                        <textarea rows="8" placeholder="Message" required></textarea>
+                        <button type="submit" class="hero-btn"> Send Message</button>
+                        <!--<button type="submit" class="hero-btn purp-btn"> Send Message</button>-->
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!---------------------footer------------------------------>
+    <section class="footer" id="aboutus">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Commodi officia, adipisci dolor quos ipsam
+            ullam facilis optio voluptatum exercitationem nesciunt tempore?<br> Mollitia iste ab amet similique nam sed
+            aliquid reprehenderit!
+        </p>
+        <div class="icons">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </div>
+    </section>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+
+    <!-----------------------------js for black box------------------->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+        <script>
+            $(window).scroll(function(){
+                if($(window).scrollTop()){
+                    $("nav").addClass("blackbox");
+                }
+                else{
+                    $("nav").removeClass("blackbox");
+                }
+            });
+        </script>-->
+
+
+</body>
+
+</html>

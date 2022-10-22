@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>ACEit</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light" style="position: fixed; z-index: 100; width: 100%;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="mainindex.html" style="font-weight: 600;">ACEit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll" style="padding-left: 350px;">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="mainindex.html">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#resources" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            RESOURCES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="interview guide.html">INTERVIEW GUIDE</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="notes.html">NOTES</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="vidoes.html">VIDEOS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="blogs.html">BLOGS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactus">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutus">ABOUT US</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            
+            <!-- <form class="d-flex" role="search" style="padding-right: 20px;"> -->
+                <a href="final_login_html.html" style="padding-right: 20px;">
+                    <button class="hero-btn purp-btn">Login</button>
+                </a>
+            <!-- </form> -->
+            <!-- <form class="d-flex" role="search"> -->
+                <a href="final_login_html.html">
+                    <button class="hero-btn purp-btn">Sign Up</button>
+                </a>
+            <!-- </form> -->
+
+        </div>
+    </nav>
+    <div class="text-box">
+        <h1>Practice Makes Perfect</h1>
+        <p>"Practice like you've never won, Perform like you've never lost"<br><br>Try Our Topicwise Quizzes To
+            Strenghten Your Concepts</p>
+        <a href="testyourself.html" class="hero-btn">Test Yourself!</a>
+    </div>
+
+
+
+    <section class="banner"></section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+
+
+<!---------------------companies------------------------------>
+
+    <!--image slider start-->
+    <section class="sliderrr">
+        <div class="slider">
+            <h1 style="font-size: 40px;">Companies</h1>
+            <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!-- <input type="radio" name="radio-btn" id="radio4"> -->
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                    <a href="iggoogle.html"><img src="images/google.jpg" alt=""></a>
+                </div>
+                <div class="slide">
+                    <a href="igdelloite.html"><img src="images/Deloitte .jpg" alt=""></a>
+                </div>
+                <div class="slide">
+                    <a href="igamazon.html"><img src="images/Amazon .jpg" alt=""></a>
+                </div>
+                <!-- <div class="slide">
+                    <img src="images/4.jpg" alt="">
+                </div> -->
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <!-- <div class="auto-btn4"></div> -->
+                </div>
+                <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <!-- <label for="radio4" class="manual-btn"></label> -->
+            </div>
+            <!--manual navigation end-->
+        </div>
+        <!--image slider end-->
+
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function () {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 3) {
+                    counter = 1;
+                }
+            }, 5000);
+        </script>
+    </section>
+
+    <!---------------------Resources------------------------------>
+    <section class="resources" id="resources">
+        <h2 style="font-size: 40px;">Resources</h2>
+        <h1 style="color: rgb(172, 171, 171); font-size: 20px;">Knowledge Empowers</h1>
+
+        <div class="rowss">
+            <div class="row1">
+
+                <div class="r-column">
+                    <h3>Interview Guide</h3>
+                    <p>How to face the question round?</p>
+                    <h4>Have a look at this Interview guide!</h4>
+                    <a href="interview guide.html"><button type="submit" class="hero-btn purp-btn"> Learn more</button></a>
+                </div>
+
+                <div class="r-column">
+                    <h3>Notes</h3>
+                    <p>Brush up your skills!</p>
+                    <h4>Check out these topic wise notes and quizes!</h4>
+                    <a href="notes.html"><button type="submit" class="hero-btn purp-btn"> Learn more</button></a>
+                </div>
+
+            </div>
+
+            <div class="row2">
+
+                <div class="r-column">
+                    <h3>Videos</h3>
+                    <p>Visual learning time!</p>
+                    <h4>Some vidoes you might like! </h4>
+                    <a href="videos.html"><button type="submit" class="hero-btn purp-btn"> Learn more</button></a>
+                </div>
+
+                <div class="r-column">
+                    <h3>BLOGS</h3>
+                    <p>"Ocean of Knowldege"</p>
+                    <h4>Check out our collection of interview blogs!<br>
+                        Click to learn more</h4>
+                    <a href="blogs.html"><button type="submit" class="hero-btn purp-btn"> Learn more</button></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showmenu() {
+            navLinks.style.right = "0";
+        }
+        function hidemenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+
+    <!---------------------contact us------------------------------>
+
+    <div class="contactus" id="contactus">
+        <section class="location">
+
+            <h2 style="font-size: 40px;">Contact Us</h2>
+            <h1 style="color: rgb(172, 171, 171); font-size: 20px;">Get in Touch!</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3294902981615!2d72.96505581490416!3d19.268032486978065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bba2e15f6c7b%3A0x20e1357d640bef7e!2sA.%20P.%20Shah%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1660759052143!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+
+
+        <section class="contact-us">
+
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>Survey No, 12, Ghodbunder Rd, opp. Hypercity Mall</h5>
+                            <p> Bhawani Nagar, Kasarvadavali,<br>
+                                Thane West, Thane, Maharashtra 400615
+                            </p>
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>077383 054XX</h5>
+                            <p>Monday to Saturday, 10AM to 6PM</p>
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <span>
+                            <h5>info@aceit.com</h5>
+                            <p>Email us your query</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact-col">
+
+                    <form>
+                        <input type="text" placeholder="Enter your name" required>
+                        <input type="text" placeholder="Enter your email addess" required>
+                        <input type="text" placeholder="Enter your moodle ID" required>
+                        <textarea rows="8" placeholder="Message" required></textarea>
+                        <button type="submit" class="hero-btn"> Send Message</button>
+                        <!--<button type="submit" class="hero-btn purp-btn"> Send Message</button>-->
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+    <!---------------------footer------------------------------>
+    <section class="footer" id="aboutus">
+        <h4 style="font-size: 30px;">About Us</h4>
+        <p>ACEit is a platform created to help students prepare for interviews for technical jobs. We help you polish your skills and get ready for the job, whether you are a fresh college graduate or a working professional.
+
+            We provide study resources required to prepare for aptitude tests and the interview process. We provide an interview guide which specifies requirements of various companies and helps you prepare in the right way to ACE your interviews and land your dream jobs.
+        </p>
+        <div class="icons">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </div>
+    </section>
+
+
+    <!-- <script>
+        $(window).scroll(function(){
+            if($(window).scrollTop()){
+                $("nav").addClass("blackbox");
+            }
+            else{
+                $("nav").removeClass("blackbox");
+            }
+        });
+    </script> -->
+
+</body>
+
+</html>

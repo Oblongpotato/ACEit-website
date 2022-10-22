@@ -1,0 +1,56 @@
+<DOCTYPE! html>
+    <head>
+        <title>
+            login and registration form
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="Login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+                </div>
+                <form id="Login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Moodle Id" required>
+                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log In</button>
+                </form>
+                <form id="Register" class="input-group" method="POST">
+                    {% csrf_token %}
+                    <input type="text" class="input-field" placeholder="Full Name" name="name" required autocomplete="off">
+                    <input type="text" class="input-field" placeholder="Moodle Id" name="moodle_id" required>
+                    <input type="email" class="input-field" placeholder="Email Id" name="email_id" required autocomplete="off">
+                    <input type="text" class="input-field" placeholder="Enter Password" name="password" required autocomplete="off">
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <h3 style="color:green;">{{message}}</h3>
+                    {% endfor %}
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+        <script>
+            var x = document.getElementById("Login");
+            var y = document.getElementById("Register");
+            var z = document.getElementById("btn");
+
+            function Register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+
+            function Login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0";
+            }
+        </script>
+    </body>
+</html>

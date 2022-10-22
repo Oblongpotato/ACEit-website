@@ -1,0 +1,210 @@
+<DOCTYPE! html>
+    <head>
+        <title>
+            login and registration form
+        </title>
+        <link rel="stylesheet" href="final_login_style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="Login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+                </div>
+                <form id="Login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Moodle Id" required>
+                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button onclick= "location.href='main2index.html'" class="float-left submit-btn">Log In</button>
+                </form>
+                <form id="Register" class="input-group" method="POST">
+                <!-- {% csrf_token %} -->
+                    <input type="text" class="input-field" placeholder="Full Name" name="name" required autocomplete="off">
+                    <input type="text" class="input-field" placeholder="Moodle Id" name="moodle_id" required>
+                    <input type="email" class="input-field" placeholder="Email Id" name="email_id" required autocomplete="off">
+                    <input type="text" class="input-field" placeholder="Enter Password" name="password" required autocomplete="off">
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <button onclick= "location.href='main2index.html'" class="float-left submit-btn">Register</button>
+                <!-- {% if messages %}
+                {% for message in messages %}
+                    <h3 style="color:green;">{{message}}</h3>
+                {% endfor %}
+                {% endif %} -->
+                </form>
+            </div>
+        </div>
+        <script>
+            var x = document.getElementById("Login");
+            var y = document.getElementById("Register");
+            var z = document.getElementById("btn");
+
+            function Register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+
+            function Login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0";
+            }
+            const form = document.getElementById('form');
+            const moodle = document.getElementById('Moodle Id');
+            const email = document.getElementById('Email Id');
+            const password = document.getElementById('password');
+            const name = document.getElementById('name');
+
+            form.addEventListener('submit', e=>{
+                e.preventDefault();
+            
+                validateInputs();
+            });
+
+            const setError = (element, message) => {
+                const inputControl=element.parentElement;
+                const errorDisplay=inputControl.querySelector('.error');
+
+                errorDisplay.innerText=message;
+                inputControl.classList.add('.error');
+                inputControl.classList.remove('success');
+            }
+
+            const setSuccess = element => {
+                const inputControl=element.parentElement;
+                const errorDisplay=inputControl.querySelector('.error');
+
+                errorDisplay.innerText='';
+                inputControl.classList.remove('.error');
+                inputControl.classList.add('success');
+            }
+
+            const isValidEmail = email => {
+                const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            const isValidMoodle = moodle => {
+                const re = /[0-9]{8,10}$/;
+            }
+
+            const isValidName = name => {
+                const re = /^(([a-zA-Z ]{2,30})+([a-zA-Z ]{2,30}))$/;
+            }
+
+
+            const validateInputs = () => {
+                const moodleValue = moodle.value.trim();
+                const emailValue = moodle.value.trim();
+                const passwordValue = moodle.value.trim();
+                const nameValue = moodle.value.trim();
+
+                if (emailValue === '') {
+                    setError(email, 'email is required.');
+                } else if (!isValidEmail(emailValue)) {
+                    setError(email, 'Provide a valid email address.');
+                } else {
+                    setSuccess(email);
+                }
+
+                if (isValidMoodle(moodle)) {
+                    setSuccess(moodle);
+                } else if (moodleValue === '') {
+                    setError(moodle, 'moodle id is required.');
+                } else {
+                    setError(moodle, 'invalid moodle id.');
+                } 
+
+                if (passwordValue === ''){
+                    setError(password, 'Password is required.');
+                } else if (passwordValue.length < 12) {
+                    setError(password, 'password must be atleast 12 characters long.');
+                } else {
+                    setSuccess(password);
+                }
+
+                if (isValidName(name)){ 
+                    setSuccess(name);
+                } else if (nameValue === '') {
+                    setError(name, 'name is required.');
+                }else {
+                    setError(name, 'enter a valid full name.');
+                }
+
+            }
+
+            function authenticate(){
+                var moodle =document.getElementById("moodle").value;
+                var password=document.getElementById("password").value;
+                if(moodle==="20102087"&& password==="20102087"){
+                    window.location.replace("main2index.html")
+                }
+            }
+
+
+
+            // var myInput = document.getElementById("psw");
+            // var letter = document.getElementById("letter");
+            // var capital = document.getElementById("capital");
+            // var number = document.getElementById("number");
+            // var length = document.getElementById("length");
+
+            // // When the user clicks on the password field, show the message box
+            // myInput.onfocus = function() {
+            // document.getElementById("message").style.display = "block";
+            // }
+
+            // // When the user clicks outside of the password field, hide the message box
+            // myInput.onblur = function() {
+            // document.getElementById("message").style.display = "none";
+            // }
+
+            // // When the user starts to type something inside the password field
+            // myInput.onkeyup = function() {
+            // // Validate lowercase letters
+            // var lowerCaseLetters = /[a-z]/g;
+            // if(myInput.value.match(lowerCaseLetters)) {
+            //     letter.classList.remove("invalid");
+            //     letter.classList.add("valid");
+            // } else {
+            //     letter.classList.remove("valid");
+            //     letter.classList.add("invalid");
+            // }
+
+            // // Validate capital letters
+            // var upperCaseLetters = /[A-Z]/g;
+            // if(myInput.value.match(upperCaseLetters)) {
+            //     capital.classList.remove("invalid");
+            //     capital.classList.add("valid");
+            // } else {
+            //     capital.classList.remove("valid");
+            //     capital.classList.add("invalid");
+            // }
+
+            // // Validate numbers
+            // var numbers = /[0-9]/g;
+            // if(myInput.value.match(numbers)) {
+            //     number.classList.remove("invalid");
+            //     number.classList.add("valid");
+            // } else {
+            //     number.classList.remove("valid");
+            //     number.classList.add("invalid");
+            // }
+
+            // // Validate length
+            // if(myInput.value.length >= 8) {
+            //     length.classList.remove("invalid");
+            //     length.classList.add("valid");
+            // } else {
+            //     length.classList.remove("valid");
+            //     length.classList.add("invalid");
+            // }
+            // }
+
+            
+
+        </script>
+    </body>
+</html>
